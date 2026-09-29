@@ -70,15 +70,26 @@ Works for both the free tier and premium. LAN play stays fully functional either
 
 ## 🆓 Free vs 💎 Premium
 
-| | Free | Premium |
-|---|---|---|
-| Hosting, worlds, plugins, dashboard, Remote Play | ✅ | ✅ |
-| Server mode | Online (Microsoft account required) | **Offline — any name works** (TLauncher, SKLauncher, Pojav…) |
-| Internet at server start | Required | **Not needed — fully offline hotspot hosting** |
-| Cloud backups · Automation · MOTD builder · World transfer · TPS monitor | — | ✅ all of them |
-| Key | — | One-time · verified **offline** (signed keys, no license server, no tracking) |
+| Feature | Free | 💎 Premium |
+|---|:---:|:---:|
+| Hosting, worlds, plugins, console, QR join, LAN broadcast, widget | ✅ | ✅ |
+| 🌍 Remote Play — friends join from any network | ✅ | ✅ |
+| 🧩 One-tap plugin installs (Modrinth) | ✅ | ✅ |
+| 🖥 Web dashboard + live map (on your network) | ✅ | ✅ |
+| 🎮 Bedrock players (Geyser + Floodgate) | ✅ | ✅ |
+| **Offline mode — any name works** (TLauncher, SKLauncher, Pojav…) | ❌ | ✅ |
+| **Fully-offline hosting** — hotspot play, no internet needed at start | ❌ | ✅ |
+| ☁️ Cloud backups to Google Drive | ❌ | ✅ |
+| ⏰ Scheduled tasks (auto saves, restarts, messages) | ❌ | ✅ |
+| 🎨 MOTD builder with live preview | ❌ | ✅ |
+| 🌍 World transfer between profiles | ❌ | ✅ |
+| 📈 Live TPS performance monitor | ❌ | ✅ |
+| 🌐 Remote web dashboard (control from any browser) | ❌ | ✅ |
+| Price | **₹0 forever** | ₹29 / mo · ₹99 / 6 mo · ₹149 / yr · ₹249 **lifetime** |
 
-➡️ Premium keys live in our [Discord](https://discord.gg/rjykaH9nUu) — ₹29 (1 mo) · ₹99 (6 mo) · ₹149 (1 yr) · ₹249 (lifetime).
+Keys are verified **offline** — signed keys, no license server, no tracking.
+
+➡️ Get one in our [Discord](https://discord.gg/rjykaH9nUu).
 
 ## 🎮 Bedrock players & plugins
 
