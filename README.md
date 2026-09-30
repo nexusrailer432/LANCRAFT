@@ -18,7 +18,7 @@ friends in other cities join too. No port forwarding. No PC. Ever.
 <br/>
 
 <a href="https://github.com/nexusrailer432/LANCRAFT/releases">
-<img width="270" src="https://img.shields.io/badge/%E2%AC%87_Download-v4.0.1-3CF07C?style=for-the-badge&labelColor=0D1117" alt="Download LANCRAFT"/>
+<img width="270" src="https://img.shields.io/badge/%E2%AC%87_Download-v4.2.4-3CF07C?style=for-the-badge&labelColor=0D1117" alt="Download LANCRAFT"/>
 </a>
 
 </div>
@@ -32,10 +32,12 @@ friends in other cities join too. No port forwarding. No PC. Ever.
 | | |
 |---|---|
 | ⛏ **Real Paper server** | A full Minecraft Java server (1.21+) running on-device — not a proxy, not an emulator |
+| 📦 **One-tap server JAR** | Paper, Vanilla or Fabric — the app fetches the latest official build for your version. No browser, no file picker |
 | 🌍 **Remote Play** | Free playit.gg tunnel built in — friends join from **any network on Earth** |
+| 🩺 **Tunnel doctor** | One-tap DIAGNOSE: pings playit's control servers over UDP and tells you exactly why a tunnel is down |
 | ☁️ **Cloud backups** | Ship your worlds to Google Drive with one tap — phones die, worlds don't |
 | ⏰ **Automation** | Schedule console commands (nightly saves, restarts) that run while you play |
-| 🧩 **One-tap plugins** | Geyser, ViaVersion, ViaBackwards, Floodgate, LuckPerms, EssentialsX — straight from Modrinth |
+| 🧩 **One-tap plugins** | Geyser, ViaVersion, ViaBackwards, Floodgate, LuckPerms, EssentialsX — straight from Modrinth, always the latest build for your loader |
 | 📈 **Live TPS monitor** | Real server health stats on your dashboard — know about lag before your players do |
 | 🎨 **MOTD builder** | Color-coded server list message with live preview |
 | 🌍 **World transfer** | Copy worlds between server profiles in-app |
@@ -51,20 +53,21 @@ friends in other cities join too. No port forwarding. No PC. Ever.
 ## 🚀 Quick start
 
 1. **Install** — grab the APK from [Releases](https://github.com/nexusrailer432/LANCRAFT/releases) and open it. Android will warn about unknown apps: **More details → Install anyway** (normal for anything outside the Play Store — same as Termux / PojavLauncher)
-2. **Tap DOWNLOAD RUNTIME** — the app now pulls its Java 21 runtime from this repo with one tap. No browser, no file picker
+2. **Tap DOWNLOAD RUNTIME** — the app pulls its Java 21 runtime from this repo with one tap
 3. **Create a profile** — name, version, RAM (1536 MB is a good default on 4 GB phones)
-4. **Import the server JAR** — e.g. `paper-1.21.4.jar` from [papermc.io](https://papermc.io/downloads) and accept the EULA
+4. **Tap DOWNLOAD SERVER JAR** — pick **Paper**, **Vanilla** or **Fabric** and the app fetches the latest official build for your version (you can still import your own `.jar` if you prefer). Accept the EULA
 5. **START** — watch the console come alive. Players join `<phone-ip>:25565`, pick the server from the LAN tab, or enable **Remote Play** for a public address that works from anywhere
 
-> Why import the server JAR yourself? Mojang's licensing doesn't let anyone redistribute their files. You download once from the official sources — LANCRAFT never bundles them.
+> Why tap-download instead of bundling? Mojang's licensing doesn't let anyone redistribute their files. The JAR is fetched from the official PaperMC / Mojang / Fabric APIs the moment you tap — LANCRAFT never bundles them.
 
 ## 🌍 Remote Play — friends from anywhere
 
 LAN-only servers are yesterday's news. Enable Remote Play and LANCRAFT runs a free [playit.gg](https://playit.gg) tunnel alongside your server:
 
-- One-time setup: approve the tunnel in your browser (~30 seconds, free account)
-- Add a **Minecraft Java** tunnel (local port 25565) in the playit dashboard
-- The public address appears in the app, the QR code and the console — share it anywhere
+1. **Network tab → ENABLE REMOTE PLAY** — a claim page opens; sign in at playit.gg (Google or email, free — **verify your email**, unverified accounts can't create tunnels) and tap **Approve**
+2. **Create the tunnel** — in the playit dashboard: **Setup → New Tunnel** → name it → type **Minecraft Java** → leave the endpoint default → create. Local port 25565 is already correct
+3. **Share the address** — the public address (something like `xxx.gl.at.ply.gg:12345`) appears in the app's Remote Play card, the QR code and the console. Friends use it in *Multiplayer → Direct Connect* from anywhere on Earth
+4. **If the agent shows offline on playit.gg** — tap **🩺 DIAGNOSE** in the Remote Play card. It checks the tunnel daemon, pings playit's control servers over UDP and tells you exactly what's wrong. The most common cause is a **VPN blocking UDP** — turn it off, restart the server. Also check you created the tunnel under the agent DIAGNOSE reports (old agents from earlier testing can linger in the dashboard)
 
 Works for both the free tier and premium. LAN play stays fully functional either way.
 
@@ -74,6 +77,7 @@ Works for both the free tier and premium. LAN play stays fully functional either
 |---|:---:|:---:|
 | Hosting, worlds, plugins, console, QR join, LAN broadcast, widget | ✅ | ✅ |
 | 🌍 Remote Play — friends join from any network | ✅ | ✅ |
+| 📦 One-tap server JAR (Paper / Vanilla / Fabric) | ✅ | ✅ |
 | 🧩 One-tap plugin installs (Modrinth) | ✅ | ✅ |
 | 🖥 Web dashboard + live map (on your network) | ✅ | ✅ |
 | 🎮 Bedrock players (Geyser + Floodgate) | ✅ | ✅ |
@@ -97,7 +101,7 @@ Keys are verified **offline** — signed keys, no license server, no tracking.
 - **Online mode (Free)** — also install Floodgate so Bedrock players join without a Java account (name shows a `.` prefix)
 - **Version mismatch** — ViaVersion + ViaBackwards let older / newer clients in
 
-All of them install with **one tap** from the **Mods** tab inside the app.
+All of them install with **one tap** from the **Mods** tab inside the app — matched to your server's loader and version.
 
 ## ❓ FAQ
 
@@ -106,9 +110,14 @@ All of them install with **one tap** from the **Mods** tab inside the app.
 Tap **More details → Install anyway**. LANCRAFT isn't on the Play Store because it runs a real server process — Play policy doesn't allow that (it's why Termux isn't there either). The release APK is signed; installs are safe.
 </details>
 
-<details><summary><b>Why do I import the server JAR myself?</b></summary>
+<details><summary><b>Why doesn't the app bundle the server JAR and runtime?</b></summary>
 
-Mojang's licensing forbids redistributing their software. LANCRAFT ships none of their files — you bring your own from official sources. This keeps everything legal. (The Java runtime we ship you directly is our own packaging of open-source builds, so one tap is fine there.)
+Mojang's licensing forbids redistributing their software. LANCRAFT ships none of their files — the JAR is fetched from official APIs the moment you tap. (The Java runtime we fetch is our own packaging of open-source builds, so one tap is fine there.)
+</details>
+
+<details><summary><b>playit says my agent is offline</b></summary>
+
+Tap **🩺 DIAGNOSE** in the Remote Play card — it checks the daemon, the relay, the playit API and pings playit's control servers over UDP, then tells you exactly what's wrong (also posted to the console). Most common cause: a **VPN on the phone blocking UDP** — turn it off and restart the server. The daemon also auto-restarts itself now if it dies while the server runs.
 </details>
 
 <details><summary><b>Will my phone survive this?</b></summary>
